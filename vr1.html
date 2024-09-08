@@ -59,7 +59,11 @@
 <a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="3 0 3" scale="1 0.02 1" class='moveTarget'></a-cylinder>
 <!-- Basic cylinder. -->
 <a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="0 0 1" scale="1 0.02 1" class='moveTarget'></a-cylinder>
-        
+
+<!-- Basic triangle. -->
+<a-triangle class="myclickdown" color="#cb1515" position="0 0.5 -10" vertex-c="1 -1 0"></a-triangle>
+<!-- Basic triangle. -->
+<a-triangle class="myclickup" color="#142cdb" position="-3 0.5 -10" vertex-c="1 -1 0"></a-triangle>
         <a-gltf-model class="collidable" src="#dna-model" position="0 2 -2" rotation="0 -30 20" scale="2 2 2" class="rotateTarget"
         event-set__1="_event: click;"
         animation__rotate="property: rotation; dir: forward; dur: 8000;
@@ -110,7 +114,7 @@
       });
 
       function objToPos(posObject) {
-        let y=posObject.y+1.6;
+        let y=posObject.y+1.0;
         return posObject.x + " " + y + " " + posObject.z;
       }
       document.querySelector('a-scene').addEventListener('enter-vr', function () {
@@ -164,9 +168,29 @@
       //registerHandlerForClick(myTarget);
     }
 
+    function setupClick() {
+      //alert('handlersetup');
+      
+      let myTarget1 = document.getElementsByClassName('.myclickup');
+      let myTarget2 = document.getElementsByClassName('.myclickdown');
+      myTarget1.addEventListener('click', function(e) {
+        
+        
+        alert(myTarget1);
+        
+      });
+
+      myTarget2.addEventListener('click', function(e) {
+        
+        alert(myTarget2);
+        
+      });
+        
+    }
+
     setupHandlers();
     //pre1.addEventListener('click', (event) => {
-    
+    setupClick();
       
 
   });
