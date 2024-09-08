@@ -80,8 +80,8 @@
         <!-- Controls for Meta quest and similar headsets -->
         <a-entity id="rig">
         <a-entity position="0 1.6 0" camera look-controls wasd-controls></a-entity>
-        <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .collidable"></a-entity>
-        <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .collidable" line="color: #118A7E"></a-entity>
+        <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .collidable .moveTarget"></a-entity>
+        <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .collidable .moveTarget" line="color: #118A7E"></a-entity>
       </a-entity>
   
       </a-scene>
