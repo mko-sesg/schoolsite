@@ -60,10 +60,6 @@
 <!-- Basic cylinder. -->
 <a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="0 0 1" scale="1 0.02 1" class='moveTarget'></a-cylinder>
 
-<!-- Basic box. -->
-<a-box class="myclickdown" position="0 0.5 -10" color="#cb1515" depth="2" height="2" width="2"></a-box>
-<!-- Basic box. -->
-<a-box class="myclickup" position="-3 0.5 -10"  color="#142cdb" depth="2" height="2" width="2"></a-box>
 <a-gltf-model class="collidable" src="#dna-model" position="0 2 -2" rotation="0 -30 20" scale="2 2 2" class="rotateTarget"
         event-set__1="_event: click;"
         animation__rotate="property: rotation; dir: forward; dur: 8000;
@@ -168,29 +164,11 @@
       //registerHandlerForClick(myTarget);
     }
 
-    function setupClick() {
-      //alert('handlersetup');
-      
-      let myTarget1 = document.querySelector('.myclickup');
-      let myTarget2 = document.querySelector('.myclickdown');
-      myTarget1.addEventListener('click', function(e) {
-        
-        
-        alert("up");
-        
-      });
-
-      myTarget2.addEventListener('click', function(e) {
-        
-        alert("down");
-        
-      });
-        
-    }
+    
 
     setupHandlers();
     //pre1.addEventListener('click', (event) => {
-    setupClick();
+    
       
 
   });
