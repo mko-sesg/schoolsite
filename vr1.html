@@ -60,11 +60,11 @@
 <!-- Basic cylinder. -->
 <a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="0 0 1" scale="1 0.02 1" class='moveTarget'></a-cylinder>
 
-<!-- Basic triangle. -->
-<a-triangle class="myclickdown" color="#cb1515" position="0 0.5 -10" vertex-c="1 -1 0"></a-triangle>
-<!-- Basic triangle. -->
-<a-triangle class="myclickup" color="#142cdb" position="-3 0.5 -10" vertex-c="1 -1 0"></a-triangle>
-        <a-gltf-model class="collidable" src="#dna-model" position="0 2 -2" rotation="0 -30 20" scale="2 2 2" class="rotateTarget"
+<!-- Basic box. -->
+<a-box class="myclickdown" position="0 0.5 -10" color="#cb1515" depth="2" height="2" width="2"></a-box>
+<!-- Basic box. -->
+<a-box class="myclickup" position="-3 0.5 -10"  color="#142cdb" depth="2" height="2" width="2"></a-box>
+<a-gltf-model class="collidable" src="#dna-model" position="0 2 -2" rotation="0 -30 20" scale="2 2 2" class="rotateTarget"
         event-set__1="_event: click;"
         animation__rotate="property: rotation; dir: forward; dur: 8000;
                                        easing: easeInSine; loop: false; from: 0 -30 0; to: 0 330 0;
@@ -176,13 +176,13 @@
       myTarget1.addEventListener('click', function(e) {
         
         
-        alert(myTarget1);
+        alert("up");
         
       });
 
       myTarget2.addEventListener('click', function(e) {
         
-        alert(myTarget2);
+        alert("down");
         
       });
         
