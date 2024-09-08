@@ -41,6 +41,24 @@
          
         
         </a-entity>
+        <!-- Basic cylinder. -->
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="3 0 -5" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="0 0 -7" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+
+<!-- Basic cylinder. -->
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="-7 0 -5" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="-5 0 -9" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="-5 0 -2" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+
+<!-- Basic cylinder. -->
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="-3 0 0" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<!-- Basic cylinder. -->
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="3 0 0" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="6 0 1" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="3 0 3" scale="1 0.02 1" class='moveTarget'></a-cylinder>
+<!-- Basic cylinder. -->
+<a-cylinder color="crimson" height="3" radius=".5" rotation="0 0 0" position="0 0 1" scale="1 0.02 1" class='moveTarget'></a-cylinder>
         
         <a-gltf-model class="collidable" src="#dna-model" position="0 2 -2" rotation="0 -30 20" scale="2 2 2" class="rotateTarget"
         event-set__1="_event: click;"
@@ -60,10 +78,11 @@
         
       
         <!-- Controls for Meta quest and similar headsets -->
+        <a-entity id="rig">
         <a-entity position="0 1.6 0" camera look-controls wasd-controls></a-entity>
         <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .collidable"></a-entity>
         <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .collidable" line="color: #118A7E"></a-entity>
-        
+      </a-entity>
   
       </a-scene>
     <!-- end vr -->
@@ -87,7 +106,7 @@
     $( document ).ready(function() {
 
       let sound = new Howl({
-        src: ['../sound/sound1.mp3']
+        src: ['sound/sound1.mp3']
       });
 
       function objToPos(posObject) {
